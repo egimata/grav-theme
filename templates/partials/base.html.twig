@@ -18,18 +18,34 @@
 {% endblock head %}
 
 {% block stylesheets %}
-    {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
-    {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
-    {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
-    {% do assets.addCss('theme://css-compiled/theme'~compress) %}
-    {% do assets.addCss('theme://css/custom.css') %}
-    {% do assets.addCss('theme://css/line-awesome.min.css') %}
+    {% do assets.addCss('theme://css/jquery-ui.css') %}
+    {% do assets.addCss('theme://css/jquery.fancybox.min.css') %}
+    {% do assets.addCss('theme://css/jquery.touchspin.css') %}
+    {% do assets.addCss('theme://css/bootstrap.css') %}
+    {% do assets.addCss('theme://css/style.css') %}
+    {% do assets.addCss('theme://css/color.css') %}
+    {% do assets.addCss('theme://css/animate.css') %}
+    {% do assets.addCss('theme://css/flaticon.css') %}
+    {% do assets.addCss('theme://css/fontawesome-all.css') %}
+    {% do assets.addCss('theme://css/responsive.css') %}
+    {% do assets.addCss('theme://css/scrollbar.css') %}
+    {% do assets.addCss('theme://css/style-2.css') %}
 {% endblock %}
 
 {% block javascripts %}
-    {% do assets.addJs('jquery', 101) %}
-    {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
-    {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/jquery.js') %}
+    {% do assets.addJs('theme://js/jquery-ui.js') %}
+    {% do assets.addJs('theme://js/jquery.bootstrap-touchspin.js') %}
+    {% do assets.addJs('theme://js/jquery.fancybox.js') %}
+    {% do assets.addJs('theme://js/bootstrap.min.js') %}
+    {% do assets.addJs('theme://js/lazyload.js') %}
+    {% do assets.addJs('theme://js/map-script.js') %}
+    {% do assets.addJs('theme://js/mixitup.js') %}
+    {% do assets.addJs('theme://js/owl.js') %}
+    {% do assets.addJs('theme://js/popper.min.js') %}
+    {% do assets.addJs('theme://js/script.js') %}
+    {% do assets.addJs('theme://js/validate.js') %}
+    {% do assets.addJs('theme://js/wow.js') %}
 {% endblock %}
 
 {% block assets deferred %}
