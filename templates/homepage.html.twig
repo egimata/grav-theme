@@ -3,3 +3,7 @@
 {% block hero %}
     {% include 'partials/slider.html.twig' %}
 {% endblock %}
+
+{% block content %}
+        {{ page.content|raw }}
+{% endblock %}

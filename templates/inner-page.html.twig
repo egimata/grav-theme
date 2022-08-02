@@ -6,5 +6,8 @@
 
 
 {% block content %}
+    {% if page.header.left_right_text %}
+        {% include 'partials/left-right-text.html.twig' %}
+    {% endif %}
     {{ page.content|raw }}
 {% endblock %}

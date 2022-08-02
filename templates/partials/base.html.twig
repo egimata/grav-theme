@@ -18,34 +18,24 @@
 {% endblock head %}
 
 {% block stylesheets %}
-    {% do assets.addCss('theme://css/jquery-ui.css') %}
-    {% do assets.addCss('theme://css/jquery.fancybox.min.css') %}
-    {% do assets.addCss('theme://css/jquery.touchspin.css') %}
     {% do assets.addCss('theme://css/bootstrap.css') %}
     {% do assets.addCss('theme://css/style.css') %}
-    {% do assets.addCss('theme://css/color.css') %}
-    {% do assets.addCss('theme://css/animate.css') %}
-    {% do assets.addCss('theme://css/flaticon.css') %}
-    {% do assets.addCss('theme://css/fontawesome-all.css') %}
     {% do assets.addCss('theme://css/responsive.css') %}
-    {% do assets.addCss('theme://css/scrollbar.css') %}
-    {% do assets.addCss('theme://css/style-2.css') %}
+    {% do assets.addCss('theme://css/color.css') %}
 {% endblock %}
 
 {% block javascripts %}
     {% do assets.addJs('theme://js/jquery.js') %}
-    {% do assets.addJs('theme://js/jquery-ui.js') %}
-    {% do assets.addJs('theme://js/jquery.bootstrap-touchspin.js') %}
-    {% do assets.addJs('theme://js/jquery.fancybox.js') %}
-    {% do assets.addJs('theme://js/bootstrap.min.js') %}
-    {% do assets.addJs('theme://js/lazyload.js') %}
-    {% do assets.addJs('theme://js/map-script.js') %}
-    {% do assets.addJs('theme://js/mixitup.js') %}
-    {% do assets.addJs('theme://js/owl.js') %}
-    {% do assets.addJs('theme://js/popper.min.js') %}
-    {% do assets.addJs('theme://js/script.js') %}
-    {% do assets.addJs('theme://js/validate.js') %}
-    {% do assets.addJs('theme://js/wow.js') %}
+    {% do assets.addJs('theme://js/popper.min.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/bootstrap.min.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/jquery-ui.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/jquery.fancybox.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/owl.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/appear.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/wow.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/lazyload.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/scrollbar.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/script.js', {group:'bottom'}) %}
 {% endblock %}
 
 {% block assets deferred %}
@@ -53,8 +43,8 @@
     {{ assets.js()|raw }}
 {% endblock %}
 </head>
-<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
-    <div id="page-wrapper">
+<body class="page-loaded">
+    <div id="page-wrapper" class="page-wrapper">
     {% block header %}
 
         {% block header_navigation %}
@@ -84,18 +74,8 @@
         {% include 'partials/footer.html.twig' %}
     {% endblock %}
 
-    {# {% block mobile %}
-    <div class="mobile-container">
-        <div class="overlay" id="overlay">
-            <div class="mobile-logo">
-                {% include 'partials/logo.html.twig' with {mobile: true} %}
-            </div>
-            <nav class="overlay-menu">
-                {% include 'partials/navigation.html.twig' with {tree: true} %}
-            </nav>
-        </div>
-    </div>
-    {% endblock %} #}
+    <!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-up-arrow"></span></div>
 
 {% block bottom %}
     {{ assets.js('bottom')|raw }}
