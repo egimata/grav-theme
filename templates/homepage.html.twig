@@ -5,5 +5,10 @@
 {% endblock %}
 
 {% block content %}
-        {{ page.content|raw }}
+        {# {{ page.content|raw }} #}
+        {% include 'partials/card-content.html.twig' %}
+        {% include 'partials/latest-news.html.twig' %}
+        {% include 'partials/our-section.html.twig' %}
+        {% include 'partials/text-image-card-content.html.twig' %}   
+
 {% endblock %}
