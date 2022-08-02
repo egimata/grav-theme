@@ -32,9 +32,10 @@
                 <div class="inner-container clearfix">
                     <!--Logo-->
                     <div class="logo-box">
-                        <div class="logo"><a href="index.html" title="LoveUs - Charity and Fundraising HTML Template"><img src="images/logo.png" alt="LoveUs - Charity and Fundraising HTML Template" title="LoveUs - Charity and Fundraising HTML Template"></a></div>
+                        <div class="logo">
+                            {% include 'partials/logo.html.twig' with {mobile: true} %}
+                        </div>
                     </div>
-
                     <!--Nav Box-->
                     <div class="nav-outer clearfix">
                         <!--Mobile Navigation Toggler-->

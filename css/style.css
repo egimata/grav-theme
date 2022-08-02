@@ -708,14 +708,14 @@ img{
 }
 
 .main-header .header-upper .logo-box{
-	position: absolute;
-	float:left;
-	left: 0;
-	top: -55px;
-	width:230px;
-	height:230px;
-	overflow:hidden;
-	z-index:10;
+    position: absolute;
+    float: left;
+    left: 0;
+    top: -77px;
+    width: 205px;
+    height: 227px;
+    overflow: hidden;
+    z-index: 10;
 }
 
 .main-header.header-style-two .header-upper .logo-box{
@@ -732,7 +732,7 @@ img{
 .main-header .header-upper .logo-box .logo{
 	position: relative;
 	display:block;
-	padding:37px 10px 25px;
+    padding: 19px 0px 0px;
 	text-align:center;
 	border-radius:0px 0px 20px 0px;
 }
@@ -4939,7 +4939,7 @@ img{
 	position:relative;
 	color:#ffffff;
 	text-align:center;
-	padding:180px 0px;
+    padding: 55px 0px;
 	background-color:#25283a;
 	z-index: 2;
 }
