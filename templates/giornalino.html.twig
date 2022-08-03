@@ -20,12 +20,12 @@
 
 {% block hero %}
     {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
+    {% include 'partials/page-banner-section.html.twig' %}
 {% endblock %}
 
 {% block body %}
     <section id="body-wrapper" class="section blog-listing">
-        <section class="container {{ grid_size }}">
-
+        <section class="container {{ grid_size }}"> 
         {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
             {% include 'partials/breadcrumbs.html.twig' %}
         {% endif %}
