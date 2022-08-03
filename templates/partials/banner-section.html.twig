@@ -7,12 +7,9 @@
 
     <div class="auto-container">
         <h1>{{page.header.title}}</h1>
-        {# {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-            <ul class="bread-crumb clearfix">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">About Us</li>
-            </ul>
-        {% endif %} #}
+        {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+            {% include 'partials/breadcrumbs.html.twig' %}
+        {% endif %}
     </div>
 
 </section>

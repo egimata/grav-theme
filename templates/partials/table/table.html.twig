@@ -1,0 +1,75 @@
+<!--End Cart Section-->
+<section class="cart-section">
+    <div class="auto-container">
+        <!--Cart Outer-->
+        <div class="cart-outer">
+            <div class="table-column">
+                <div class="inner-column">
+                    <div class="table-outer">
+                        <div class="table-box">
+                            <table class="cart-table">
+                                <thead class="cart-header">
+                                    <tr>
+                                        <th>Citta</th>
+                                        <th>&nbsp;</th>
+                                        <th>Indirizzi</th>
+                                        <th>Orari</th>
+                                        <th>Contatti</th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                {% for table in page.header.tables %}
+                                    <tr>
+                                        <td colspan="2" class="prod-column">
+                                            <h4 class="prod-title">{{table.citta}}</h4>
+                                        </td>
+                                        <td class="price">{{table.indirizzi}}</td>
+                                        <td class="price">{{table.orari}}</td>
+                                        <td class="price">{{table.contatti}}</td>
+                                    </tr>
+                                </tbody>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    
+                        <div class="coupon-outer">
+                            <div class="content-box clearfix">
+                                <div class="apply-coupon clearfix">
+                                    <div class="field-label">Click on a coupon code to apply</div>
+                                    <div class="form-group clearfix">
+                                        <input type="text" name="coupon-code" value="" placeholder="Apply Coupon Code">
+                                    </div>
+                                    <div class="form-group clearfix">
+                                        <button type="button" class="theme-btn coupon-btn btn-style-one"><span class="btn-title">Apply Now</span></button>
+                                    </div>
+                                </div>
+                                <div class="link-box">
+                                    <button type="button" class="theme-btn btn-style-one cart-btn"><span class="btn-title">Update Cart</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="totals-column clearfix">
+                <div class="inner">
+                    <div class="cart-total">
+                        <h3 class="title">Cart Totals</h3>
+                        <!--Totals Table-->
+                        <ul class="totals-table">
+                            <li class="clearfix">
+                                <span class="col col-title">Sub Total</span>
+                                <span class="col">$150.00</span>
+                            </li>
+                            <li class="clearfix"><span class="col col-title">Order Total</span><span class="col total-price">$160.00</span></li>
+                            <li class="clearfix"><button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Procceed To Checkout</span></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Cart Section-->
