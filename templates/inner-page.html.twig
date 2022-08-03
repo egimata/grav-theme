@@ -9,5 +9,8 @@
     {% if page.header.left_right_text %}
         {% include 'partials/left-right-text.html.twig' %}
     {% endif %}
+    {% if page.header.tables %}
+        {% include 'partials/table/table.html.twig' %}
+    {% endif %}
     {{ page.content|raw }}
 {% endblock %}

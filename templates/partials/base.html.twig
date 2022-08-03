@@ -19,6 +19,7 @@
 
 {% block stylesheets %}
     {% do assets.addCss('theme://css/bootstrap.css') %}
+    {% do assets.addCss('theme://css/custom.css', {priority: 100}) %}
     {% do assets.addCss('theme://css/style.css') %}
     {% do assets.addCss('theme://css/responsive.css') %}
     {% do assets.addCss('theme://css/color.css') %}
