@@ -3,7 +3,7 @@
 
 {% if config.plugins.simplesearch.enabled %}
 <div class="sidebar-content">
-    {# {% include 'partials/simplesearch_searchbox.html.twig' %} #}
+    {% include 'partials/simplesearch_searchbox.html.twig' %}
 </div>
 {% endif %}
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
