@@ -14,3 +14,9 @@
 	min-height:70px;
 	margin-bottom:25px;	
 }
+.causes-section {
+	padding: 121px 0px 0px 0px !important;
+}
+.parallax {
+	position: fixed;
+}

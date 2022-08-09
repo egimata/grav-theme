@@ -3,16 +3,20 @@
         <div class="auto-container">
         
         	<div class="sec-title centered">
-                <div class="sub-title">Our Causes</div>
-                <h2>Popular Causes</h2>
-                <div class="text">Cupidatat non proident sunt</div>
+                <h2>GIORNALINO</h2>
+                <div class="sub-title">Io Noi e il Diabete</div>
             </div>
-                        
         	<div class="row clearfix">
             
             	<!--Cause Block-->
                 <div class="cause-block col-lg-4 col-md-6 col-sm-12">
                 	<div class="inner-box wow fadeInUp" data-wow-delay="0ms">
+                        {% block item %}
+                            {% for child in collection %}
+                                {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+                            {% endfor %}
+
+                        {% endblock %}
                     	<div class="image-box">
                         	<figure class="image"><a href="cause-single.html"><img class="lazy-image" src="images/resource/image-spacer-for-validation.png" data-src="images/resource/cause-image-1.jpg" alt=""></a></figure>
                         </div>
@@ -70,14 +74,14 @@
                     	<div class="image-box">
                         	<figure class="image"><a href="cause-single.html"><img class="lazy-image" src="images/resource/image-spacer-for-validation.png" data-src="images/resource/cause-image-3.jpg" alt=""></a></figure>
                         </div>
-                        {# <div class="donate-info">
+                        <div class="donate-info">
                             <div class="progress-box">
                                 <div class="bar">
                                     <div class="bar-inner count-bar" data-percent="70%"><div class="count-text">70%</div></div>
                                 </div>
                             </div>
                             <div class="donation-count clearfix"><span class="raised"><strong>Raised:</strong> $6,000</span> <span class="goal"><strong>Goal:</strong> $8,000</span></div>
-                        </div> #}
+                        </div>
                         <div class="lower-content">
                             <h3><a href="cause-single.html">Io Noi e il Diabete-dicembre 2019</a></h3>
                             <div class="date"><span class="fa fa-calendar-alt"></span>Io Noi e il DiabeteBy LuisellaDicembre 20, 2019</div>
