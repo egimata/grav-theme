@@ -6,9 +6,13 @@
 {% endblock %}
 
 {% block content %}
+    <section class="container {{ grid_size }}">
         {# {{ page.content|raw }} #}
         {% include 'partials/card-content.html.twig' %}
         {% include 'partials/latest-news.html.twig' %}
+    </section>
         {% include 'partials/our-section.html.twig' %}
-        {% include 'partials/text-image-card-content.html.twig' %}   
+    <section class="container {{ grid_size }}">
+        {% include 'partials/text-image-card-content.html.twig' %}
+    </section>
 {% endblock %}
