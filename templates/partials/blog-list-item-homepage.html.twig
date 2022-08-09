@@ -1,0 +1,31 @@
+
+
+<!--Cause Block-->
+<div class="cause-block col-lg-4 col-md-6 col-sm-12">
+    <div class="inner-box wow fadeInUp" data-wow-delay="0ms">
+        <div class="image-box">
+            <figure class="image">
+                <a href="{{ page.url }}">
+                    <img class="lazy-image" 
+                    src="{{ image.cropZoom(800,400).html|raw }}" 
+                    data-src="{{ image.cropZoom(800,400).html|raw }}" alt="{{ page.title }}">
+                </a>
+            </figure>
+        </div>
+        <div class="lower-content">
+            {% include 'partials/blog/date.html.twig' %}
+            {% include 'partials/blog/title.html.twig' with {title_level: 'h3'} %}
+            {# <h3><a href="cause-single.html">Io, Noi e il Diabete- Maggio 2021</a></h3>
+            <div class="date"><span class="fa fa-calendar-alt"></span> Io Noi e il DiabeteBy admin Ottobre 2, 2021</div> #}
+            <br />
+            <div class="text">                
+                {% if page.summary != page.content %}
+                    {{ page.summary|raw }}
+                {% else %}
+                    {{ page.content|raw }}
+                {% endif %}
+            </div>
+            <div class="link-box"><a href="{{ page.url }}" class="theme-btn btn-style-two"><span class="btn-title">Di Piu</span></a></div>
+        </div>
+    </div>
+</div>
