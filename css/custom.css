@@ -7,3 +7,10 @@
 .news-block .inner-box .date{
     top: -13px !important;
 }
+
+.main-footer .news-widget .news-post{
+	position:relative;
+	padding-left:0px!important;
+	min-height:70px;
+	margin-bottom:25px;	
+}

@@ -2045,7 +2045,7 @@ img{
 .sec-title h2{
 	position: relative;
 	display: block;
-	font-size:60px;
+	font-size:40px;
 	line-height: 1.2em;
 	font-weight: 400;
 	text-transform:capitalize;
@@ -2270,7 +2270,7 @@ img{
 
 .causes-section{
 	position:relative;
-	padding:130px 0px 120px;
+	padding: 130px 0px 0px 120px;
 	background-color:#ffffff;
 	overflow:hidden;
 }
@@ -3301,7 +3301,7 @@ img{
 
 .news-section{
 	position:relative;
-	padding:160px 0px 120px;
+	padding: 30px 0px 120px;
 	background-color:#ffffff;
 	z-index:2;
 }
@@ -3704,7 +3704,7 @@ img{
 
 .main-footer .news-widget .news-post{
 	position:relative;
-	padding-left:120px;
+	padding-left:0px!important;
 	min-height:70px;
 	margin-bottom:25px;	
 }
