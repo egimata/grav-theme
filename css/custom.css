@@ -20,3 +20,18 @@
 .parallax {
 	position: fixed;
 }
+
+.event-block-two .title-column .inner{
+	position:relative;
+	display:block;
+	padding-left:0px;
+	padding-top:0px;
+	min-height:160px;
+}
+
+.upcoming-events {
+    position: relative;
+    padding: 71px 0px;
+    background-color: #edf1f5;
+    overflow: hidden;
+}
