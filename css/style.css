@@ -3024,7 +3024,7 @@ img{
 
 .upcoming-events{
 	position:relative;
-	padding:150px 0px;
+	padding:70px 0px;
 	background-color:#edf1f5;
 	overflow:hidden;
 }
@@ -4401,8 +4401,8 @@ img{
 .event-block-two .title-column .inner{
 	position:relative;
 	display:block;
-	padding-left:260px;
-	padding-top:50px;
+	padding-left:0px;
+	padding-top:0px;
 	min-height:160px;
 }
 
