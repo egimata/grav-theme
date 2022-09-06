@@ -35,3 +35,14 @@
     background-color: #edf1f5;
     overflow: hidden;
 }
+
+.event-block-two .title-column h3 a {
+    color: #3cc88f!important;
+	cursor: alias !important ;
+}
+.event-block-two .title-column h3 {
+    font-size: 24px;
+    color: #3cc88f!important;
+    line-height: 1.2em;
+}
+
