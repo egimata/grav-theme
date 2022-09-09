@@ -1,0 +1,15 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<div class="auto-container">  
+    <div class="row clearfix">
+        <div class="title-column col-lg-12 col-md-12 col-sm-12" style="padding: 150px 200px;">
+            <div class="inner">
+                <div class="text">
+                    {{ page.content|raw }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -4,13 +4,17 @@
 <div class="cause-block col-lg-4 col-md-6 col-sm-12">
     <div class="inner-box wow fadeInUp" data-wow-delay="0ms">
         <div class="image-box">
+            {% set image = page.media.images|first %}
+            {% if image %}
             <figure class="image">
                 <a href="{{ page.url }}">
+                 {{ image.cropZoom(800,400).html|raw }}
                     <img class="lazy-image" 
                     src="{{ image.cropZoom(800,400).html|raw }}" 
                     data-src="{{ image.cropZoom(800,400).html|raw }}" alt="{{ page.title }}">
                 </a>
             </figure>
+            {% endif %}
         </div>
         <div class="lower-content">
             {% include 'partials/blog/date.html.twig' %}
