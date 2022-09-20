@@ -274,4 +274,6 @@ input:checked~.acc-content {
       transform: rotateX(0deg);
     }
   }
-
+#breadcrumbs{
+  text-align: center;
+}

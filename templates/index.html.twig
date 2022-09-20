@@ -1,10 +1,13 @@
 {% extends 'partials/base.html.twig' %}
-
+{% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(true) %}
 {% block content %}
 <div class="auto-container">  
     <div class="row clearfix">
-        <div class="title-column col-lg-12 col-md-12 col-sm-12" style="padding: 150px 200px;">
+        <div class="title-column col-lg-12 col-md-12 col-sm-12" style="padding: 67px 111px;">
             <div class="inner">
+                {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+                    {% include 'partials/breadcrumbs.html.twig' %}
+                {% endif %}
                 <div class="text">
                     {{ page.content|raw }}
                 </div>
