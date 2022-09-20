@@ -1,0 +1,21 @@
+<div class="news-block-two col-lg-6 col-md-12 col-sm-12">
+    <div class="inner-box wow fadeInLeft" data-wow-delay="0ms">
+        <div class="image-box">
+        {% set image = page.media.images|first %}
+            {% if image %}
+            <figure class="image">
+                <a href="{{ page.url }}">
+                 {{ image.cropZoom(800,400).html|raw }}
+                    <img class="lazy-image" 
+                    src="{{ image.cropZoom(800,400).html|raw }}" 
+                    data-src="{{ image.cropZoom(800,400).html|raw }}" alt="{{ page.title }}">
+                </a>
+            </figure>
+            {% endif %}
+        </div>
+        <div class="lower-content">
+            {% include 'partials/blog/title.html.twig' with {title_level: 'h3'} %}
+            <div class="link-box"><a href="{{ page.url }}" class="theme-btn btn-style-one"><span class="btn-title">Di Piu</span></a></div>
+        </div>
+    </div>
+</div>

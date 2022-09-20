@@ -7,41 +7,33 @@
 
 {% block content %}
     {% if page.header.left_right_text %}
-        {% include 'partials/left-right-text.html.twig' %}
+        {% include 'partials/inner-page/left-right-text.html.twig' %}
     {% endif %}
     {% if page.header.tables %}
         {% include 'partials/table/table.html.twig' %}
     {% endif %}
     {% if page.header.la_nostra_index1 %}
-        {% include 'partials/la_nostra.html.twig' %}
+        {% include 'partials/inner-page/la_nostra.html.twig' %}
     {% endif %}
     {% if page.header.left_right_text_4_lanostra %}
-        {% include 'partials/left-right-text-4-lanostra.html.twig' %}
+        {% include 'partials/inner-page/left-right-text-4-lanostra.html.twig' %}
     {% endif %}
     {% if page.header.small_card_la_nostra_statuto %}
-        {% include 'partials/small-cards-la-nostra.html.twig' %}
+        {% include 'partials/inner-page/small-cards-la-nostra.html.twig' %}
     {% endif %}
     {% if page.header.la_nostra_index3 %}
-        {% include 'partials/la-nostra-index3.html.twig' %}
+        {% include 'partials/inner-page/la-nostra-index3.html.twig' %}
     {% endif %}
     {% if page.header.accordion_lanostra3 %}
-        {% include 'partials/accordion-lanostra3.html.twig' %}
+        {% include 'partials/inner-page/accordion-lanostra3.html.twig' %}
     {% endif %}
     {% if page.header.tesseramento_aside_bar %}
-        {% include 'partials/tesseramento_aside.html.twig' %}
+        {% include 'partials/inner-page/tesseramento_aside.html.twig' %}
     {% endif %}
     {% if page.header.rendicoto_aside_bar %}
-        {% include 'partials/rendicoto_aside.html.twig' %}
+        {% include 'partials/inner-page/rendicoto_aside.html.twig' %}
     {% endif %}
     {% if page.header.inner_two_column_text %}
-        {% include 'partials/two-column-text.html.twig' %}
+        {% include 'partials/inner-page/two-column-text.html.twig' %}
     {% endif %}
-     
-    {# <div>
-     <p class="centered"> 
-           {{ page.content|raw }}
-     </p>
-</div> #}
-{# {% include 'partials/la_nostra.html.twig' %} #}
-    {# {{ page.content|raw }} #}
 {% endblock %}

@@ -1,0 +1,32 @@
+<!--News Section-->
+    <section class="news-section">
+    	<div class="top-rotten-curve"></div>
+        <div class="auto-container">
+            <div class="title-box clearfix">
+                <div class="sec-title">
+                    <div class="sub-title">Get In Touch</div>
+                    <h2>ULTIME NOTIZIE</h2>
+                </div>
+                
+                <div class="link"><a href="{{ base_url }}/eventi/anno-2021-in-corso" class="theme-btn btn-style-one"><span class="btn-title">Tutti Gli Articoli</span></a></div>
+            </div>
+            
+            <div class="row clearfix">
+                {% block item %}
+                    <!-- News Block Left -->
+                    {% for child in event_collection %}
+                        {% include 'partials/homepage/news-section-left.html.twig' with {blog: page, page: child} %}    
+                    {% endfor %}
+                
+                    <!--News Block Right-->      
+                    <div class="news-block-three col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-box wow fadeInRight" data-wow-delay="0ms">
+                            {% for child in event_collection_right %}
+                                {% include 'partials/homepage/news-section-right.html.twig' with {blog: page, page: child} %}    
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+    </section>

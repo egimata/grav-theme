@@ -1,0 +1,16 @@
+
+<!--News Post-->
+<div class="news-post">
+    {% if image %}
+    <div class="post-thumb">
+        <a href="{{ page.url }}">
+            {{ image.cropZoom(800,400).html|raw }}
+            <img class="lazy-image" 
+            src="{{ image.cropZoom(800,400).html|raw }}" 
+            data-src="{{ image.cropZoom(800,400).html|raw }}" alt="{{ page.title }}">
+        </a>
+    </div>
+    {% endif %}
+    {% include 'partials/homepage/date.html.twig' %}
+    {% include 'partials/blog/title.html.twig' with {title_level: 'h4'} %}
+</div>

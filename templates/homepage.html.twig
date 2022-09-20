@@ -1,34 +1,34 @@
 {% extends 'partials/base.html.twig' %}
 {% set blog_image = page.media.images[page.header.hero_image] ?: page.media.images|first %}
 {% set collection = page.collection() %}
+{% set event_collection = page.collection('event') %}
+{% set event_collection_right = page.collection('event_right') %}
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set random_articles = taxonomy.findTaxonomy({'category':'blog'})|randomize %}
 
 {% block hero %}
-    {% include 'partials/slider.html.twig' %}
+    {% include 'partials/homepage/slider.html.twig' %}
 {% endblock %}
 
 {% block content %}
     <section class="container {{ grid_size }}">
-        {# {{ page.content|raw }} #}
-        {% include 'partials/card-content.html.twig' %}
-        {% include 'partials/latest-news.html.twig' %}
+        {% include 'partials/homepage/card-content.html.twig' %}
+        {% include 'partials/homepage/latest-news.html.twig' %}
     </section>
-        {% include 'partials/our-section.html.twig' %}
+        {% include 'partials/homepage/our-section.html.twig' %}
     <section class="container {{ grid_size }}">
         <!--Causes Section-->
         <section class="causes-section">
             <div class="auto-container">
-            
                 <div class="sec-title centered">
                     <h2>GIORNALINO</h2>
                     <div class="sub-title">Io Noi e il Diabete</div>
                 </div>
-                {% block item %}
                 <div class="row clearfix">
-                {% for child in collection %}
-                    {% include 'partials/blog-list-item-homepage.html.twig' with {blog: page, page: child} %}
-                {% endfor %}
+                {% block item %}
+                    {% for child in collection %}
+                        {% include 'partials/homepage/blog-list-item-homepage.html.twig' with {blog: page, page: child} %}
+                    {% endfor %}
                 {% endblock %}
                 </div>
             </div>
